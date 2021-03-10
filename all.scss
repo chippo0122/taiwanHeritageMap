@@ -1,0 +1,163 @@
+/*!
+ * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+// scss-docs-start import-stack
+// Configuration
+@import "helpers/bootstrap/scss/functions";
+@import "helpers/bootstrap/scss/variables";
+@import "helpers/bootstrap/scss/mixins";
+@import "helpers/bootstrap/scss/utilities";
+
+// Layout & components
+@import "helpers/bootstrap/scss/root";
+@import "helpers/bootstrap/scss/reboot";
+@import "helpers/bootstrap/scss/type";
+@import "helpers/bootstrap/scss/images";
+@import "helpers/bootstrap/scss/containers";
+@import "helpers/bootstrap/scss/card";
+@import "helpers/bootstrap/scss/grid";
+@import "helpers/bootstrap/scss/forms";
+@import "helpers/bootstrap/scss/buttons";
+@import "helpers/bootstrap/scss/list-group";
+@import "helpers/bootstrap/scss/pagination";
+@import "helpers/bootstrap/scss/modal";
+// Helpers
+@import "helpers/bootstrap/scss/helpers";
+
+// Utilities
+@import "helpers/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack 
+$bg-yolk: #ffde4b;
+$bg-old: #800000;
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container-fluid{
+    height: 100%;
+}
+.control{
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 900;
+    transition: 0.5s;
+    @media (max-width: 767px) {
+        height: 70%;
+        transform: translateY(-100%);
+    }
+}
+.time-set{
+    font-size: 0.85rem;
+}
+.drop{
+    transform: translateY(0);
+}
+.pannel{
+    height: 100%;
+    >.card-header{
+        height: 12%;
+        h1{
+            font-family: 'Noto Serif TC', serif;
+        }
+    }
+    >.card-body{
+        height: 88%;
+    }
+    border-radius: 0px;
+}
+.toggle-btn{
+    display: block;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover{
+        background-color: brown !important;
+    }
+}
+.search-board{
+    height: 10%;
+    @media (max-width: 767px) {
+        height: 25%;
+    }
+}
+.op-responsive{
+    height: 90%;
+    overflow-y: scroll; 
+    margin-top: 0.5rem;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (max-width: 767px) {
+        height: 75%;
+    }
+}
+.op-sec{
+    .card{
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        transition: 0.3s;
+        p{
+            margin: 0;
+        }
+        &:hover{
+            background-color: $bg-yolk;
+        }
+    }
+    .item-title{
+        font-family: 'Noto Serif TC', serif;
+    }
+}
+.leaflet-popup-content{
+    padding: 0.5rem!important;
+    .card{
+        h5, p{
+            font-family: 'Noto Serif TC', serif;
+        }
+        p{
+            margin: 0;
+            font-size: 1rem;
+        }
+        .info-responsive{
+            overflow-y: scroll;
+            height: 150px;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        border: 0;
+    }
+}
+.loading-jumbotron{
+    z-index: 1200;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(helpers/bg-jumbotron.png);
+    background-color: #800000;
+    background-position: left bottom;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    @media(max-width: 768px){
+        background-size: cover;
+    }
+    h1{
+        font-family: 'Noto Serif TC', serif;
+    }
+    p{
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
